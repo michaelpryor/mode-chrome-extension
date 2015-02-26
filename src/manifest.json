@@ -1,0 +1,30 @@
+{
+  "name": "Mode Chrome Extension",
+  "version": "0.0.3",
+  "manifest_version":2,
+  "description": "An unofficial Chrome extension to share Mode reports! On schedules!",
+  "icons": {
+    "16":"assets/icon.png",
+    "48":"assets/icon.png",
+    "128":"assets/icon.png"
+  },
+  "browser_action": {
+    "default_icon": "assets/icon.png",
+    "default_title": "Share report",
+    "default_popup": "popup.html"
+  },
+  "background":{
+    "scripts":[
+               "scripts/jquery.min.js",
+               "scripts/underscore.min.js",
+               "scripts/d3.min.js",
+               "scripts/popup.js",
+               "scripts/background.js"
+             ]
+  },
+  "permissions": [
+      "tabs",
+      "<all_urls>",
+      "storage"
+  ]
+}

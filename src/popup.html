@@ -1,0 +1,290 @@
+<!doctype html>
+<head>
+  <title>Mode Distributor</title>
+  <link rel="stylesheet" type="text/css" href="css/popup.css">
+</head>
+<body>
+  
+  <div class="tab-header">
+    <div class="tab share-tab active">Share</div>
+    <div class="tab history-tab">History</div>
+    <div class="tab schedule-tab">Schedules</div>
+    <div class="tab settings-tab">Settings</div>
+      
+  </div>
+  
+  <div class="page" id="share-page">
+    <div class="hide" id="go-to-mode">
+      <p class="empty-message">Go to a Mode report to share!</p>
+    </div>
+    <div class="share-form">
+      <form id="post-form">
+        
+        <div class="share-form-element">
+          <label for="email-form">Email</label></br>
+          <input class="text-form" id="email-form" type="text" name="emails" placeholder="will@octan.com, presidentB@octan.com" />
+        </div>
+        
+        <div class="share-form-element">
+          <label for="slack-form">Slack</label></br>
+          <input class="text-form" id="slack-form" type="text" name="slack-channels" placeholder="E.g., #general or @batman" />
+        </div>
+        
+        <div class="share-form-element">
+          <label for="hipchat-form">Hipchat</label></br>
+          <input class="text-form" id="hipchat-form" type="text" name="hipchats" placeholder="A Hipchat room name" />
+        </div>
+        
+        <div class="share-form-element">
+          <label for="message-form">Message</label></br>
+          <textarea class="text-form" id="message-form"></textarea>
+        </div>
+        <div class="table-selector">
+          <form>
+            <input type="checkbox" name="include-table" id="include-table" checked>
+            Include the first 25 rows of your report.
+          </form>
+        </div>
+        
+        <div class="schedule-form hide">
+        <p class="schedule-header">Schedule</p>
+          <div class="interval-selector">
+            <div class="interval-button left active" id="interval-hourly">Hourly</div>
+            <div class="interval-button" id="interval-daily">Daily</div>
+            <div class="interval-button right" id="interval-weekly">Weekly</div>
+          </div>
+          <div class="time-selector">
+            <span class="time-span" id="day-span">
+              On 
+              <select id="day-selector">
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+                <option value="Sunday">Sunday</option>
+              </select>
+            </span>
+            <span class="time-span" id="hour-span">
+              At
+              <select id="hour-selector">
+                <option value="0">12:00 am</option>
+                <option value="1">1:00 am</option>
+                <option value="2">2:00 am</option>
+                <option value="3">3:00 am</option>
+                <option value="4">4:00 am</option>
+                <option value="5">5:00 am</option>
+                <option value="6">6:00 am</option>
+                <option value="7">7:00 am</option>
+                <option value="8">8:00 am</option>
+                <option value="9">9:00 am</option>
+                <option value="10">10:00 am</option>
+                <option value="11">11:00 am</option>
+                <option value="12">12:00 pm</option>
+                <option value="13">1:00 pm</option>
+                <option value="14">2:00 pm</option>
+                <option value="15">3:00 pm</option>
+                <option value="16">4:00 pm</option>
+                <option value="17">5:00 pm</option>
+                <option value="18">6:00 pm</option>
+                <option value="19">7:00 pm</option>
+                <option value="20">8:00 pm</option>
+                <option value="21">9:00 pm</option>
+                <option value="22">10:00 pm</option>
+                <option value="23">11:00 pm</option>
+              </select>
+            </span>
+            <span class="time-span" id="minute-span">
+              At
+              <select id="minute-selector">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+              </select>
+              past the hour.
+            </span>
+          </div>
+          <div class="catchup-selector">
+            <form>
+              <input type="checkbox" name="catchup" id="catchup-box" checked>
+              If this is checked and your browser is closed when the schedule is supposed to run, your report will be shared as soon 
+              as your browser is opened. If it's not checked, it will wait until it's next scheduled run.
+            </form>
+          </div>
+            
+        </div>
+        
+        <div class="share-button-container">
+          <button id="share-schedule" class="submit-button now-form" type="button">Share on a Schedule</button>
+          <button id="share-now" class="submit-button now-form" type="button">Share Now</button>
+          <button id="cancel-schedule-create" class="secondary-button schedule-form hide" type="button">Cancel</button>
+          <button id="create-schedule" class="submit-button schedule-form hide" type="button">Create Schedule</button>
+        </div>
+      </form>
+    </div>
+    <div class="status hide"></div>
+    
+  </div>
+  
+  <div class="page hide" id="history-page">
+    <div class="share-list">
+      <div class="share-list-items"></div>
+    </div>
+    <button id="clear-history" class="red-button" type="button">Clear history</button>
+  </div>
+  
+  <div class="page hide" id="schedule-page">
+    <div class="schedule-list">
+      <div class="schedule-list-items"></div>
+      <div class="schedule-detail hide">
+        <div class="schedule-detail-text">
+          <button id="back-to-schedule-list" class="secondary-button" type="button">BACK</button>
+          <p>
+            <span id="detail-title" class="hi-title"></span></br>
+            <span id="detail-description"></span>
+          </p>
+          <table>
+            <tr>
+              <td class="detail-share-header">FREQUENCY</td>
+              <td class="detail-content" id="detail-interval"></td>
+            </tr>
+            <tr>
+              <td class="detail-share-header">EMAIL</td>
+              <td class="detail-content" id="detail-email"></td>
+            </tr>
+            <tr>
+              <td class="detail-share-header">SLACK</td>
+              <td class="detail-content" id="detail-slack"></td>
+            </tr>
+            <tr>
+              <td class="detail-share-header">HIPCHAT</td>
+              <td class="detail-content" id="detail-hipchat"></td>
+            </tr>
+            <tr>
+              <td class="detail-share-header">MESSAGE</td>
+              <td class="detail-content" id="detail-message"></td>
+            </tr>
+            <tr>
+              <td class="detail-share-header">LAST SENT</td>
+              <td class="detail-content" id="detail-last-sent"></td>
+            </tr>
+          </table>
+        </div>
+        <button class="red-button schedule-delete" type="button">Delete schedule</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="page hide" id="settings-page">
+    <div class="settings-form">
+      <form id="settings-form">
+        <div class="settings-form-element">
+          <label for="mode-cred-form">Mode</label></br>
+          <div class="settings-tip">You can use your Mode username and password, or generate a password using a 
+            <a href="https://modeanalytics.com/settings/access_tokens">Mode API token.</a></div>
+          <input class="cred-form" id="mode-account" type="text" name="mode-account" placeholder="Mode username" />
+          <input class="cred-form" id="mode-password" type="password" name="mode-password" placeholder="Mode password" />
+        </div>
+        
+        <div class="settings-form-element">
+          <label for="madrill-cred-form">Mandrill</label></br>
+          <div class="settings-tip">You must sign up for <a href="https://mandrill.com/signup/">Mandrill</a> to use. This 
+            <a href="https://medium.com/@mariusc23/send-an-email-using-only-javascript-b53319616782">post</a> describes 
+            how to create a free Mandrill key.</div>
+          <input class="cred-form" id="mandrill-name" type="text" name="mandrill-name" placeholder="Name" />
+          <input class="cred-form" id="mandrill-email" type="text" name="mandrill-email" placeholder="Sender email" />
+          <input class="cred-form" id="mandrill-key" type="password" name="mandrill-key" placeholder="Mandrill key" />
+        </div>
+        
+        <div class="settings-form-element">
+          <label for="slack-cred-form">Slack</label></br>
+          <div class="settings-tip">You can create a Slack API token from the "Authentication" section at the bottom 
+            of <a href="https://api.slack.com/web#basics">this page</a>.</div>
+          <input class="cred-form" id="slack-username" type="text" name="slack-username" placeholder="Slack username" />
+          <input class="cred-form" id="slack-token" type="password" name="slack-token" placeholder="Slack API token" />
+        </div>
+        
+        <div class="settings-form-element">
+          <label for="hipchat-cred-form">Hipchat</label></br>
+          <div class="settings-tip">You can create a Hipchat API token on <a href="https://www.hipchat.com/account/api">this page</a>.</div>
+          <input class="cred-form" id="hipchat-token" type="password" name="hipchat-token" placeholder="Hipchat API token" />
+        </div>
+        
+        <div class="settings-button-container">
+          <button id="validate-settings" class="submit-button" type="button">Are these valid?</button>
+          <!-- <button id="save-settings" class="submit-button" type="button">Save settings</button> -->
+        </div>
+      </form>
+    </div>
+    <div class="settings-validation-container hide">
+      <p id="mode-validation"></p>
+      <p id="mandrill-validation"></p>
+      <p id="slack-validation"></p>
+      <p id="hipchat-validation"></p>
+    </div>
+  </div>
+  
+</body>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/underscore.min.js"></script>
+<script src="scripts/d3.min.js"></script>
+<script src="scripts/popup.js"></script>
+
