@@ -82,9 +82,9 @@ $(".cred-form").on("keyup", function() {
 // Validate current crendentials
 $("#validate-settings").click(function() {
   $("#slack-validation").text("Checking Slack...").css("color","#666");
-  $("#email-validation").text("Checking Slack...").css("color","#666");
-  $("#hipchat-validation").text("Checking Slack...").css("color","#666");
-  $("#mode-validation").text("Checking Slack...").css("color","#666");
+  $("#email-validation").text("Checking Email...").css("color","#666");
+  $("#hipchat-validation").text("Checking Hipchat...").css("color","#666");
+  $("#mode-validation").text("Checking Mode...").css("color","#666");
 
   checkCredentials();
 })
